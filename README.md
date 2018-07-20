@@ -365,7 +365,7 @@ const Comment = ({ body, author }) => (
 
 const CommentList = ({ comments }) => (
     <ul>
-     {this.props.comments.map(comment => <Comment {...comment}/>)}
+     {comments.map(comment => <Comment {...comment}/>)}
     </ul>
 );
 ```
@@ -685,7 +685,7 @@ class Button extends Component {
 
 ```jsx
 // good
-import cx from 'classnames';
+import classNames from 'classnames';
  
 class Button extends Component {
   // ... 
@@ -1186,7 +1186,7 @@ Side effects like ajax calls, logging, dom updates, etc, should **__never__** be
 
 - **action types** - use constants, *[NOUN]_\[VERB]*, eg. `USER_FETCH` or `MATERIAL_REQUEST_UPDATE`
 - **action creators** - *[verb]\[Noun]()* eg. `fetchCurrentUser()`, `acceptMaterialRequest()`
-- **selectors** - *get\[NOUN]()* or *select\[NOUN]()* eg. `getSelectedCards()`, `selectActiveRows()`
+- **selectors** - *get\[Noun]()* or *select\[Noun]()* eg. `getSelectedCards()`, `selectActiveRows()`
 
 
 ## Utility/Helper Functions
